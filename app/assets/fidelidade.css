@@ -1,0 +1,86 @@
+body {
+    font-family: 'Quicksand', sans-serif;
+    color: var(--text-color-light);
+
+}
+
+.titles {
+    font-size: 20px;
+    text-align: center;
+    display: block;
+}
+
+.geral {
+    padding-top: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+}
+
+.search_client .button {
+    float: right;
+    margin-right: 0.3%;
+}
+
+.all_button_fidelidade {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+}
+
+.button_fidelidade {
+    width: 100px;
+    height: 70px;
+    margin-bottom: 15px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+.button_teste1{
+    -webkit-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+.button_final {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button_confirmar {
+    width: 90px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.button_cancelar {
+    background-color: #808080;
+    width: 90px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.invalid-data {
+    background-color: red;
+    text-align: center;
+    color: black;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+@media only screen and (max-width: 740px) {
+    .all_button_fidelidade {
+        grid-template-columns: 33.33% 33.33% 33.33%;
+    }
+}
+
+@media only screen and (max-width: 520px) {
+    .all_button_fidelidade {
+        grid-template-columns: 50% 50%;
+    }
+}
