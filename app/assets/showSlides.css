@@ -1,0 +1,149 @@
+.slides-preview{
+    position: relative;
+    transform: scale(0.8);
+   width: 100%;
+   height: 100%;
+}
+
+.slides-section{
+    overflow: hidden;
+    position: absolute;
+    background-image: url('https://i.pinimg.com/originals/2f/5c/10/2f5c1058f9e6aafa32c10e9e029dcbdd.jpg');
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.img-product {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    animation: body-animation 8s ease-out forwards;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.slide-transition{
+    position:absolute;
+    top:0;
+    left:0;
+    right:100%;
+    bottom:0;
+    display:flex;
+    z-index:2;
+   
+}
+.transition-active{
+    animation: transition-animate 2.2s ease forwards; 
+    z-index: 15;
+}
+.theme {
+    z-index: 1;
+    position: absolute;
+    width: 50%;
+    animation: animation-body-description  2.0s ease-out forwards;
+    right: -50%;
+    bottom: -30px;
+    top: -30px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: rotate(-5deg);
+    background-position: center;
+}
+
+.theme-shadow {
+    z-index: 0;
+    opacity: 0.5;
+    position: absolute;
+    width: 50%;
+    animation: animation-shadow 2.0s ease-out forwards;
+    right: -50%;
+    bottom: -30px;
+    top: -30px;
+    transform: rotate(-4deg);
+}
+.titleItem-slides{
+    align-items: center;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKmikTObA9Z23iD012rsfq6UDa5Rid8b7rug&usqp=CAU");
+   
+     justify-content: center;
+    color: #35220e;
+    font-size: 30px;
+    font-weight: 900;
+    margin-bottom: 50px;
+    text-align: center;
+}
+.description-slides{
+    margin-bottom: 50px;
+    text-align: center;
+
+}
+.price-slides{
+    text-align: center;
+}
+.product-fields-content{
+    word-break: break-word;
+    margin-bottom: 50px;
+    margin-right: 60px;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    width: 100%;
+    max-width: 300px;
+    position: absolute;
+    right: 30px;
+    bottom: 150px;
+    z-index: 4;
+    animation: product-fields 2.9s ease-out forwards;
+}
+.button-fullscrean{
+    text-align: center;
+    z-index: 20;
+    position: absolute;
+    display: block;
+    bottom:10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+}
+
+@keyframes transition-animate{
+    0% {left:100%; right:0; }
+    50% {left:0; right:0;display:block;}
+    100% {left:0; right:100%;display:block;}
+  }
+@keyframes body-animation {
+    100% {
+        transform: scale(1.1);
+    }
+}
+@keyframes product-fields {
+    0% {bottom:50px;opacity:0;}
+    50% {bottom:50px;opacity:0;}
+    100% {bottom:120px;opacity:1;}
+  }
+@keyframes animation-body-description {
+    from {
+        right: -50%;
+    }
+
+    to {
+        right: -30px;
+    }
+}
+@keyframes animation-shadow{
+    from {
+        right: -50%;
+    }
+
+    to {
+        right: -20px
+    }
+}
+
+.preview-fullscreen{
+    transform: scale(1);
+    width: 100%;
+    height: 100%;
+}

@@ -1,0 +1,16 @@
+.table-slides{
+    text-align: center;
+    font-size: 20px;
+}
+.add-new-slide{
+    padding: 0 0 0 85%;
+}
+.all_slides{
+    display: flex;
+}
+.input-name{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}

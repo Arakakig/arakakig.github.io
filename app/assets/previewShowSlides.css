@@ -1,0 +1,163 @@
+.slides-section {
+    overflow: hidden;
+    background-image: url('https://i.pinimg.com/originals/2f/5c/10/2f5c1058f9e6aafa32c10e9e029dcbdd.jpg');
+    width: 604px;
+    position: absolute;
+    height: 304px;
+    border: 3px solid black ;
+}
+
+.img-product {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    animation: body-animation 8s ease-out forwards;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.slide-transition{
+    position:absolute;
+    top:0;
+    left:0;
+    right:100%;
+    bottom:0;
+    display:flex;
+    z-index:2;
+    background-image: url('https://i.pinimg.com/originals/2f/5c/10/2f5c1058f9e6aafa32c10e9e029dcbdd.jpg');
+    
+
+}
+.transition-active{
+    animation: transition-animate 2.2s ease forwards; 
+    z-index: 15;
+}
+.wood {
+    z-index: 1;
+    position: absolute;
+    width: 50%;
+    animation: animation-body-description  2.0s ease-out forwards;
+    right: -50%;
+    bottom: -30px;
+    top: -30px;
+    background-image: url('https://i.pinimg.com/originals/2f/5c/10/2f5c1058f9e6aafa32c10e9e029dcbdd.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: rotate(-5deg);
+    background-position: center;
+}
+.titleItem-slides-basic-blue{
+    align-items: center;
+    background-image: url("https://image.freepik.com/fotos-gratis/limpe-a-tinta-branca-do-fundo-da-textura-da-parede-de-concreto_7189-1092.jpg");
+    justify-content: center;
+    color: #2596be;
+    font-size: 30px;
+    font-weight: 900;
+    margin-bottom: 50px;
+    text-align: center;
+}
+.basic-blue{
+    z-index: 1;
+    position: absolute;
+    width: 50%;
+    animation: animation-body-description  2.0s ease-out forwards;
+    right: -50%;
+    bottom: -30px;
+    top: -30px;
+    background-image: url('https://i.pinimg.com/236x/42/4d/7c/424d7cc4969063e601a61eb99f6e6e25.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: rotate(-5deg);
+}
+.basic-blue-shadow{
+    z-index: 0;
+    background-color: white;
+    opacity: 0.5;
+    position: absolute;
+    width: 50%;
+    animation: animation-shadow 2.0s ease-out forwards;
+    right: -50%;
+    bottom: -30px;
+    top: -30px;
+    transform: rotate(-4deg);
+}
+.wood-shadow {
+    z-index: 0;
+    background-color: #35220e;
+    opacity: 0.5;
+    position: absolute;
+    width: 50%;
+    animation: animation-shadow 2.0s ease-out forwards;
+    right: -50%;
+    bottom: -30px;
+    top: -30px;
+    transform: rotate(-4deg);
+}
+.titleItem-slides-wood{
+    align-items: center;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKmikTObA9Z23iD012rsfq6UDa5Rid8b7rug&usqp=CAU");
+     justify-content: center;
+    color: #35220e;
+    font-size: 20px;
+    font-weight: 900;
+    margin-bottom: 25px;
+    text-align: center;
+}
+.description-slides{
+    margin-bottom: 25px;
+    text-align: center;
+
+}
+.price-slides{
+    text-align: center;
+}
+.product-fields-content{
+    word-break: break-word;
+    padding-bottom: 80px;
+    padding-right: 20px;
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+    width: 100%;
+    max-width: 200px;
+    position: absolute;
+    right: 0;
+    bottom: 150px;
+    z-index: 4;
+    animation: product-fields 2.9s ease-out forwards;
+}
+
+
+@keyframes transition-animate{
+    0% {left:100%; right:0; display:block;}
+    50% {left:0; right:0;}
+    100% {left:0; right:100%;}
+  }
+@keyframes body-animation {
+    100% {
+        transform: scale(1.1);
+    }
+}
+@keyframes product-fields {
+    0% {bottom:10px;opacity:0;}
+    50% {bottom:10px;opacity:0;}
+    100% {bottom:40px;opacity:1;}
+  }
+@keyframes animation-body-description {
+    from {
+        right: -50%;
+    }
+
+    to {
+        right: -20px
+    }
+}
+@keyframes animation-shadow{
+    from {
+        right: -50%;
+    }
+
+    to {
+        right: -12px
+    }
+}
