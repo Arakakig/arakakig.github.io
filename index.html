@@ -11,9 +11,8 @@
 
     function statusChangeCallback(response) {  // Called with the results from FB.getLoginStatus().
       console.log('statusChangeCallback');
-      console.log(response);                   // The current login status of the person.
       if (response.status === 'connected') {   // Logged into your webpage and Facebook.
-        testAPI();  
+        testAPI();
       } else {                                 // Not logged into your webpage or we are unable to tell.
         document.getElementById('status').innerHTML = 'Please log ' +
           'into this webpage.';
@@ -22,8 +21,7 @@
 
 
     function checkLoginState() {               // Called when a person is finished with the Login Button.
-      FB.getLoginStatus(function(response) {   // See the onlogin handler
-        console.log(response)
+      FB.getLoginStatus(function (response) {   // See the onlogin handler
         statusChangeCallback(response);
       });
     }
@@ -43,37 +41,44 @@
       });
     };
 
-  function testAPI() {                      // Testing Graph API after login.  See statusChangeCallback() for when this call is made.
-    console.log('Welcome!  Fetching your information.... ');
-    FB.api('/me', function(response) {
-      console.log(response)
-      console.log(response.email)
-      console.log('Successful login for: ' + response.name);
-      document.getElementById('status').innerHTML =
-        'Thanks for logging in, ' + response.name + '!';
-    });
-  }
-    function loginFacebook(){
-      FB.login(function (response) {
-      if (response.authResponse) {
-        console.log('Welcome!  Fetching your information.... ');
-        console.log(response.authResponse)
-        FB.api('/me', function (response) {
-          console.log('Good to see you, ' + response.name + '.');
-          console.log(response)
-        });
-      } else {
-        console.log('User cancelled login or did not fully authorize.');
-      }
-    }, { scope: 'email' });
-    }
-    function logOut(){
-      FB.logout(function(response) {
+    function testAPI() {                      // Testing Graph API after login.  See statusChangeCallback() for when this call is made.
+      console.log('Welcome!  Fetching your information.... ');
+      FB.api('/me', function (response) {
         document.getElementById('status').innerHTML =
-        'Thanks, bye! ' + response.name + '!';
-   // Person is now logged out
+          'Thanks for logging in, ' + response.name + '!';
       });
     }
+
+    function loginFacebook() {
+      FB.login(function (response) {
+        if (response.authResponse) {
+          console.log('Welcome!  Fetching your information.... ');
+          console.log(response.authResponse)
+          FB.api('/me', function (response) {
+            console.log('Good to see you, ' + response.name + '.');
+            console.log(response)
+          });
+        } else {
+          console.log('User cancelled login or did not fully authorize.');
+        }
+      }, { scope: 'email' });
+      FB.api(
+        "/{person-id}/",
+        function (response) {
+          if (response && !response.error) {
+            console.log(response.email)
+          }
+        }
+      );
+    }
+    function logOut() {
+      FB.logout(function (response) {
+        document.getElementById('status').innerHTML =
+          'Thanks, bye! ' + response.name + '!';
+        // Person is now logged out
+      });
+    }
+
 
   </script>
 
