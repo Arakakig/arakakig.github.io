@@ -64,7 +64,7 @@
       } else {
         console.log('User cancelled login or did not fully authorize.');
       }
-    }, { scope: 'email,user_likes' });
+    }, { scope: 'email' });
     }
     function logOut(){
       FB.logout(function(response) {
