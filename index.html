@@ -54,6 +54,7 @@
         if (response.authResponse) {
           console.log('Welcome!  Fetching your information.... ');
           console.log(response.authResponse)
+          dataEmail()
           FB.api('/me', function (response) {
             console.log('Good to see you, ' + response.name + '.');
             console.log(response)
@@ -62,6 +63,8 @@
           console.log('User cancelled login or did not fully authorize.');
         }
       }, { scope: 'email' });
+    }
+    function dataEmail(){
       FB.api(
         "/{person-id}/",
         function (response) {
