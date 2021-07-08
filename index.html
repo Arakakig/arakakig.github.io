@@ -4,6 +4,8 @@
 <head>
   <title>Facebook Login JavaScript Example</title>
   <meta charset="UTF-8">
+  <meta name="google-signin-client_id"
+    content="119514544648-btbne126p86h2cq67svmgt5en8he76vm.apps.googleusercontent.com">
 </head>
 
 <body>
@@ -64,7 +66,7 @@
         }
       }, { scope: 'email' });
     }
-    function dataEmail(){
+    function dataEmail() {
       FB.api(
         "/{person-id}/",
         function (response) {
@@ -81,7 +83,19 @@
         // Person is now logged out
       });
     }
-
+    function onSignIn(googleUser) {
+      var profile = googleUser.getBasicProfile();
+      console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+      console.log('Name: ' + profile.getName());
+      console.log('Image URL: ' + profile.getImageUrl());
+      console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+    }
+    function signOut() {
+      var auth2 = gapi.auth2.getAuthInstance();
+      auth2.signOut().then(function () {
+        console.log('User signed out.');
+      });
+    }
 
   </script>
 
@@ -92,6 +106,9 @@
   </fb:login-button>
   <button onclick="loginFacebook()">Login</button>
   <button onclick="logOut()">Desconectar-se</button>
+  <div class="g-signin2" data-onsuccess="onSignIn"></div>
+  <button onclick="signOut()">Desconectar-se Google</button>
+
   <div id="status">
   </div>
 
