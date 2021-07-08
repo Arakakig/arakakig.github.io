@@ -69,6 +69,8 @@
     }
     function logOut(){
       FB.logout(function(response) {
+        document.getElementById('status').innerHTML =
+        'Thanks, bye! ' + response.name + '!';
    // Person is now logged out
       });
     }
