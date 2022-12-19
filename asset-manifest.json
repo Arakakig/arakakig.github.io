@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.fa0970a7.css",
-    "main.js": "/static/js/main.fbcf36be.js",
+    "main.css": "/static/css/main.840299d5.css",
+    "main.js": "/static/js/main.caab38be.js",
     "static/media/ciblocoCg.png": "/static/media/ciblocoCg.3c03725c20754890b458.png",
     "static/media/me-about.png": "/static/media/me-about.11adf2d14fec50d342ff.png",
     "static/media/me.png": "/static/media/me.2b2c67a1a63745937d00.png",
-    "static/media/cv.pdf": "/static/media/cv.1acdb118beb3ba5e1dc3.pdf",
+    "static/media/cv.pdf": "/static/media/cv.5ae8fbb74a2ebb59576e.pdf",
     "static/media/Tic-Tac-Toe.png": "/static/media/Tic-Tac-Toe.615429ca17fa0b064c08.png",
     "static/media/chatReact.png": "/static/media/chatReact.725f5c86a533a612cb6d.png",
     "index.html": "/index.html",
-    "main.fa0970a7.css.map": "/static/css/main.fa0970a7.css.map",
-    "main.fbcf36be.js.map": "/static/js/main.fbcf36be.js.map"
+    "main.840299d5.css.map": "/static/css/main.840299d5.css.map",
+    "main.caab38be.js.map": "/static/js/main.caab38be.js.map"
   },
   "entrypoints": [
-    "static/css/main.fa0970a7.css",
-    "static/js/main.fbcf36be.js"
+    "static/css/main.840299d5.css",
+    "static/js/main.caab38be.js"
   ]
 }
